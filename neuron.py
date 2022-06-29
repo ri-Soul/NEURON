@@ -1,35 +1,61 @@
 import time
 import random
 
+game_mode = input("Enter game mode: P-ost = remember it backwards/M-emento = remember: ")
+
 while True:
-    game_mode = input("Enter diffeculty E-azy/N-ormal/H-ared: ")
-    if game_mode == "E":
-        game_mode = 6
+    game_char = input("Enter game characters: E-azy/N-ormal/H-ared: ")
+    if game_char == "E":
+        game_char = 6
+        print("6 Characters")
         break
-    elif game_mode == "N":
-        game_mode = 12
+    elif game_char == "N":
+        game_char = 12
+        print("12 Characters")
         break
-    elif game_mode == "H":
-        game_mode = 15
+    elif game_char == "H":
+        game_char = 15
+        print("15 Characters")
         break
     else:
         continue
 
 def gen():
     numb = ""
-    for x in range(game_mode):
+    for x in range(game_char):
       numb += str(random.randint(0, 9))
     return numb
 
+def mirroir():
+    mirroir = []
+    for item in numb:
+        mirroir.insert(1, numb)
+    numb = ""
+    for item in mirroir:
+        numb += item
 while True:
-    numb = gen()
-    print(numb)
-    time.sleep(4)
-    for x in range(256):
-        print()
-    if numb == input("Enter the number: "):
-        print("Correct!")
-    else:
-        print("Fault...")
-    print(numb)
-    input("Press a key to continue...")
+    if game_mode == "M":
+        numb = gen()
+        print(numb)
+        time.sleep(4)
+        for x in range(256):
+            print()
+        if numb == input("Enter the number: "):
+            print("Correct!")
+        else:
+            print("Fault...")
+        print(numb)
+        input("Press a key to continue...")
+    elif game_mode == "P":
+        numb = gen()
+        print(numb)
+        time.sleep(4)
+        for x in range(256):
+            print()
+        mirroir()
+        if numb == input("Enter the number: "):
+            print("Correct!")
+        else:
+            print("Fault...")
+        print(numb)
+        input("Press a key to continue...")
