@@ -26,13 +26,14 @@ def gen():
       numb += str(random.randint(0, 9))
     return numb
 
-def mirroir():
+def mirroir(numb):
     mirroir = []
     for item in numb:
         mirroir.insert(1, numb)
     numb = ""
     for item in mirroir:
         numb += item
+
 while True:
     if game_mode == "M":
         numb = gen()
@@ -52,7 +53,7 @@ while True:
         time.sleep(4)
         for x in range(256):
             print()
-        mirroir()
+        mirroir(numb)
         if numb == input("Enter the number: "):
             print("Correct!")
         else:
