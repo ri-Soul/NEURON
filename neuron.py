@@ -18,7 +18,7 @@ while True:
 def gen():
     numb = ""
     for x in range(game_mode):
-      numb += random.randint(9+1)
+      numb += random.randint(0, 9)
     return numb
 
 while True:
