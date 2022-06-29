@@ -2,7 +2,7 @@ import time
 import random
 
 while True:
-    game_mode = input("Enter diffeculty E-azy/N-ormal/H-ared")
+    game_mode = input("Enter diffeculty E-azy/N-ormal/H-ared: ")
     if game_mode == "E":
         game_mode = 6
         break
@@ -18,7 +18,7 @@ while True:
 def gen():
     numb = ""
     for x in range(game_mode):
-      numb += random.randInt(9+1)
+      numb += random.randint(9+1)
     return numb
 
 while True:
