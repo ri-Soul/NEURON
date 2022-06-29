@@ -31,3 +31,5 @@ while True:
         print("Correct!")
     else:
         print("Fault...")
+    print(numb)
+    input("Press a key to continue...")
