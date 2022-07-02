@@ -45,10 +45,12 @@ while True:
         time.sleep(4)
         for x in range(256):
             print()
-        numb = reversed(numb)
-        if numb == input("Enter the number: "):
+        mirroir
+        for digit in reversed(numb):
+            mirroir += digit
+        if mirroir == input("Enter the number: "):
             print("Correct!")
         else:
             print("Fault...")
-        print(numb)
+        print(mirroir)
         input("Press a key to continue...")
