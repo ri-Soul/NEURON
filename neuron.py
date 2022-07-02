@@ -45,7 +45,7 @@ while True:
         time.sleep(4)
         for x in range(256):
             print()
-        mirroir
+        mirroir = ""
         for digit in reversed(numb):
             mirroir += digit
         if mirroir == input("Enter the number: "):
